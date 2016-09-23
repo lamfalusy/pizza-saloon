@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="layout">
+<body>
+	<div layout:fragment="content">
+		<h2>Pizzas</h2>
+		<table>
+			<thead>
+				<tr>
+			    	<th>Id</th>
+			    	<th>Name</th>
+			    	<th>Description</th>
+			  	</tr>
+			</thead>
+			<tbody>
+			  	<th:block th:each="pizza : ${pizzas}">
+				    <tr>
+				        <td th:text="${pizza.id}"/>
+				        <td th:text="${pizza.name}"/>
+				        <td th:text="${pizza.description}"/>
+				    </tr>
+				</th:block>
+			</tbody>
+		</table>
+		<div>
+			<h3>Create new pizza</h3>
+			<form action="#" th:action="@{/pizza/create}" th:object="${pizza}" method="post">
+				<table>
+					<tr>
+						<td>Name:</td>
+						<td><input type="text" th:field="*{name}"/></td>
+					</tr>
+					<tr>
+						<td>Description:</td>
+						<td><input type="text" th:field="*{description}"/></td>
+					</tr>
+					<tr>
+						<td><input class="submit-button" type="submit"/></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

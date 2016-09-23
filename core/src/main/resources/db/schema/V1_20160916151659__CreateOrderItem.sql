@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `pizza_saloon`.`order_item` (
-  `id` BIGINT NOT NULL,
+  `id` BIGINT AUTO_INCREMENT NOT NULL,
   `order_id` BIGINT NOT NULL,
   `pizza_id` BIGINT NOT NULL,
   PRIMARY KEY (`id`),

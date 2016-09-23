@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `pizza_saloon`.`order` (
-  `id` BIGINT NOT NULL,
+  `id` BIGINT AUTO_INCREMENT NOT NULL,
   `user_id` BIGINT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `df_idx` (`user_id` ASC),

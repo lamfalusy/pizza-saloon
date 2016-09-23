@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `pizza_saloon`.`user` (
-  `id` BIGINT NOT NULL,
+  `id` BIGINT AUTO_INCREMENT NOT NULL,
   `email` VARCHAR(255) NOT NULL,
   `password` VARCHAR(255) NOT NULL,
   `role` VARCHAR(45) NOT NULL,

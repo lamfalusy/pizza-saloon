@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>Pizza Saloon</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+	<div class="header">
+		<h2>Pizza saloon</h2>
+		<div class="menu">
+			<a th:href="@{/home}">Home</a><span sec:authorize="hasAuthority('ADMIN')"> - <a th:href="@{/user}" >User management</a> - <a th:href="@{/pizza}">Pizza management</a></span>
+		</div>
+		<div class="login-div" sec:authorize="isAuthenticated()">
+	  		Hi <span sec:authentication="name"></span> have a nice day. <a th:href="@{/logout}">Log out</a>
+		</div>
+		<div class="login-div" sec:authorize="isAnonymous()">
+	  		You are not logged in, please <a th:href="@{/login}">Sign in</a> or if you do not have account please <a th:href="@{/registration}">Sign up</a>
+		</div>
+		<div class="slogen">
+			Eat your best pizza ever!
+		</div>
+	</div>
+	
+	<div class="content" layout:fragment="content"></div>
+	
+	<div class="footer">
+		Pizza Saloon 2016
+	</div>
+</body>
+</html>

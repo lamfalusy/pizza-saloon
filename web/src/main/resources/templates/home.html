@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="layout">
+<body>
+	<div layout:fragment="content">
+		<div>
+			<h3>Our pizzas</h3>
+			<table>
+				<thead>
+					<tr>
+				    	<th>Id</th>
+				    	<th>Name</th>
+				    	<th>Description</th>
+				  	</tr>
+				</thead>
+				<tbody>
+				  	<th:block th:each="pizza : ${pizzas}">
+					    <tr>
+					        <td th:text="${pizza.id}"/>
+					        <td th:text="${pizza.name}"/>
+					        <td th:text="${pizza.description}"/>
+					    </tr>
+					</th:block>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
