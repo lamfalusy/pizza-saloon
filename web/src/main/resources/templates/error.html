@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Spring Boot and Thymeleaf example</title>
+	<title>Pizza Saloon</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/css/error.css"/>
 </head>
 <body>
-	<h2>Ups, something went wrong</h2>
+	<div class="error-page-div">
+		<h2>Ups, something went wrong</h2>
+		<div class="error-page-message">Go back to <a th:href="@{/home}">Home</a> page.</div>
+	</div>
 </body>
 </html>

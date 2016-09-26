@@ -2,19 +2,22 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
     layout:decorator="layout">
+<head>
+	<link rel="stylesheet" href="/css/login.css"/>
+</head>
 <body>
 	<div layout:fragment="content">
 		<h2>Pizza saloon sign in</h2>
-        <div th:if="${param.error}">
+        <div th:if="${param.error}" class="error-message">
             Invalid username and password.
         </div>
         <div th:if="${param.logout}">
             You have been logged out.
         </div>
         <form th:action="@{/login}" method="post">
-        	<table>
+        	<table class="form-table">
         		<tr>
-        			<td>User Name:</td>
+        			<td>Email:</td>
         			<td><input type="text" name="username"/></td>
         		</tr>
         		<tr>

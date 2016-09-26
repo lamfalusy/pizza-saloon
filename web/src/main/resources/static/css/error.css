@@ -1,0 +1,26 @@
+body {
+	padding-bottom: 0px;
+	height: 100%;
+}
+
+.error-page-div {
+    width: 300px;
+    height: 135px;
+   	background-color: #f7f7f7;
+    border-radius: 4px;
+    border: 2px solid #6e5baa;
+    box-shadow: 0 0 4px rgba(110,91,170,0);
+    position: absolute;
+  	top: 40%;
+  	left: 43%;
+}
+
+.error-page-div h2 {
+	color: #784cab;
+	text-align: center;
+}
+
+.error-page-div .error-page-message {
+	text-align: center;
+	margin-bottom: 15px;
+}

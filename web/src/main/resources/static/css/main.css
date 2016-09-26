@@ -27,50 +27,6 @@ body {
 	width: 94%;
 }
 
-.footer {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 1rem;
-	text-align: center;
-	background: #784cab;
-    color: white;
-}
-
-.header {
-	background: #784cab;
-	color: white;
-	padding: 0px;
-	width: 100%;
-	position: absolute;
-}
-
-.header h2 {
-	width: 300px;
-    margin: 12px 10px 10px 25px;
-    display: inline-block;
-}
-
-.header .login-div {
-	float: right;
-    margin-top: 30px;
-    margin-right: 25px;
-    line-height: 20px;
-}
-
-.header .menu {
-	display: inline-block;
-    height: 20px;
-    line-height: 20px;
-    position: absolute;
-    margin-top: 30px;
-}
-
-.header .slogen {
-	margin: 0px 10px 12px 25px;
-}
-
 .submit-button {
 	background: #408fec;
     color: white;
@@ -80,4 +36,41 @@ body {
     border-radius: 5px;
     padding: 10px 15px;
     border: none;
+    margin-top: 10px;
+    height: initial;
+}
+
+input {
+    height: 30px;
+    border-radius: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 0 4px rgba(110,91,170,0);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(110,91,170,0.5);
+    border-color: #6e5baa;
+}
+
+.error-message {
+	color: red;
+}
+
+.form-table td {
+	padding: 3px;
+}
+
+.data-table {
+	width: 95%;
+    margin: auto;
+    border-spacing: 40px 13px;
+}
+
+.data-table th {
+	text-align: left;
+	border-bottom: solid 3px #6e5baa;
+	line-height: 35px;
 }

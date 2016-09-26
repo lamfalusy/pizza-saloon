@@ -2,15 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
     layout:decorator="layout">
+<head>
+	<link rel="stylesheet" href="/css/registration.css"/>
+</head>
 <body>
 	<div layout:fragment="content">
 		<h2>Pizza saloon registration</h2>
 		<div>
-			<div>
+			<div class="registration-slogen">
 				Do you want to eat your life's pizza? If yes, then let's go and sign up.
 			</div>
-			<form action="#" th:action="@{/registration/create}" th:object="${user}" method="post">
-				<table>
+			<form th:action="@{/registration/create}" th:object="${user}" method="post">
+				<table class="form-table">
 					<tr>
 						<td>Email:</td>
 						<td><input type="text" th:field="*{email}"/></td>
